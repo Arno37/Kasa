@@ -1,10 +1,9 @@
-function Card({title, picture}) {
-    return (
-        <div className="card">
-            <img className="card__img" src={picture} alt="" />
-            <h2 className="card__title"> {title}</h2>
-        </div>
-    )
-}
+import { Link } from "react-router-dom";
+import Banner from "../components/Banner/Banner";
+import Card from "../components/Card/Card";
 
-export default Card
+import HomeBackground from "../components/Banner/home - background.png"
+
+function Home( {
+    return
+})
