@@ -1,15 +1,32 @@
-import { NavLink } from "react-router-dom";
-import Logo from '../pictures/LOGO-header.png';
+import { Link, NavLink } from "react-router-dom";
+import Logo from '../Header/LOGO-header.png';
 
+const navLinks = [
+    { name: 'Accueil', href: '/' },
+    { name: 'A Propos de', href: '/' },
+];
 
 function Header() {
     return (
-        <header className="navbar">
-            <NavLink to="/"><img src={Logo} alt="Logo Header" className="navbar__img"/></NavLink>
-            <nav className="navbar__links">
-                <NavLink exact to="/" activeClassName="navbar__links--active">Accueil</NavLink>
-                <NavLink to="/About" activeClassName="navbar__links--active">A propos</NavLink>
+        <header className="header">
+            <Link to="/">
+                <img className="header__logo" src={Logo} alt="Kasa" />
+            </Link>
+            <nav className="header__nav">
+                {navLinks.map((item) => (
+                    <NavLink 
+                        to={item.href}
+                        key={item.name}
+                        className={({ isActive }) => {
+                            return isActive ? 'active-link' : ''
+                        }}
+                    >
+                        {item.name}
+                    </NavLink>
+                ))}
             </nav>
         </header>
     );
 }
+
+export default Header;
