@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Card({title, picture}) {
     return (
         <div className="card">
