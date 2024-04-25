@@ -2,16 +2,14 @@ import Home from './pages/Home'
 
 
 
-
+import { createBrowserRouter } from 'react-router-dom';
 function App() {
 return (
 <BrowserRouter>
 <Header />
   <main>
     <Routes>
-      <Route path='/' element={<About />} />
-      <Route path="/appartement" element={<Appartment />} />
-      <Route path="/oups" element={<Error04 />} />
+     
       <Route path="/accueil" element={<Home />} />
     </Routes>
   </main>
