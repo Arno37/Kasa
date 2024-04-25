@@ -7,5 +7,5 @@ export default function AboutBanner () {
             <img src={AboutBanner} alt="Banner Picture" />
             <div className="overlay"></div>
         </div>
-    )
+        )
 }
