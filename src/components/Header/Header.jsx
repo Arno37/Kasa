@@ -7,7 +7,7 @@ export default function Header() {
             <img src={KasaLogo} alt ='' className="KasaLogo" />
         <nav>
             <Link to={`/`}>Accueil</Link>
-            <Link to={`/about`}>A propos</Link>
+            <Link to={`/About`}>A propos</Link>
         </nav>
         </header>
     )
