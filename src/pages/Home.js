@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import CardsAppartments from '../components/Card/Cards'
 import HomeBanner from "../components/Banner/HomeBanner";
@@ -16,8 +17,8 @@ export default function Home(){
         <>
             <HomeBanner />
             <div className="appartments-cards">
-                {appartments.map(apartment =>
-                    <CardsAppartments title={apartment.title} image={apartment.cover} id={apartment.id} key={apartment.id}/>
+                {appartments.map(appartment =>
+                    <CardsAppartments title={appartment.title} image={appartment.cover} id={appartment.id} key={appartment.id}/>
                 )}
             </div>
         </>
