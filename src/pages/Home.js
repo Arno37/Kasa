@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import CardsAppartments from '../components/Card/Cards'
+import CardsAppartments from '../components/Home/Cards'
 import HomeBanner from "../components/Banner/HomeBanner";
 
 export default function Home(){
