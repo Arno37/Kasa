@@ -1,11 +1,17 @@
-import React from 'react';
+import { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-export default function Cards(props) {
-    return (
-        <Link to={`/Appartments/${props.id}`} className='cards-appartments'>
-            <h2>{props.title}</h2>
-            <img src={props.image}/>
-        </Link>
-    )
+export default class Card extends Component{
+    
+    render(){
+        const { logement } = this.props;
+        return(
+            <div className="appartement">
+                <div className ="appartement-picture">
+                   <p>{logement.title}</p>
+                   <Link key={`logement-${logement.id}`} to={`/logement/${logement.id}`}><img src={logement.cover} alt={logement.title}/></Link>
+                </div>
+            </div>
+        )
+    }
 }

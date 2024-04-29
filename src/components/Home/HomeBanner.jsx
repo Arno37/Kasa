@@ -1,8 +1,9 @@
 import { Component } from 'react';
 import homeBanner from '../Banner/home - banner.png'
 
-export default function HomeBanner() {
-  return (
+class Homebanner extends Component {
+  render(){
+      return(
     <div className='home-Banner'>
       <img src={homeBanner} alt="background-picture" />
       <div className='title'>
@@ -11,3 +12,6 @@ export default function HomeBanner() {
     </div>
   );
 }
+}
+
+export default Homebanner;

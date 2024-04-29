@@ -1,26 +1,16 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import CardsAppartments from '../components/Home/Cards'
-import HomeBanner from "../components/Banner/HomeBanner";
+import { Component } from "react";
+import Homebanner from "../components/Home/HomeBanner";
+import GridHome from '../components/Home/GridHome';
 
-export default function Home(){
-
-    const [appartments, setAppartments] = useState([]);
-    useEffect(()=> {
-        fetch('/data/appartments-list.json')
-        .then(res => res.json())
-        .then(data => setAppartments(data))
-        .catch(error => console.log(error))
-    },[]);
-
-    return (
-        <>
-            <HomeBanner />
-            <div className="appartments-cards">
-                {appartments.map(appartment =>
-                    <CardsAppartments title={appartment.title} image={appartment.cover} id={appartment.id} key={appartment.id}/>
-                )}
+class Home extends Component {
+    render(){
+        return(
+            <div className="Home">
+                <Homebanner />
+                <GridHome />
             </div>
-        </>
-    );
+        )
+    }
 }
+
+export default Home
