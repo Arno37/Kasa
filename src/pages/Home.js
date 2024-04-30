@@ -1,6 +1,6 @@
-import { Component } from "react";
-import Homebanner from "../components/Home/HomeBanner";
-import GridHome from '../components/Home/GridHome';
+import React from 'react'
+import Homebanner from "../components/HomeBanner";
+import GridHome from '../components/GridHome';
 
 class Home extends Component {
     render(){

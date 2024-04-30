@@ -1,5 +1,5 @@
 import { Component }  from "react";
-import Cards from '../Home/Cards';
+import Cards from './Cards';
 
 class GridHome extends Component {
     constructor (props) {
