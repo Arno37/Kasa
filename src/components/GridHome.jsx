@@ -1,6 +1,18 @@
-import { Component }  from "react";
-import Cards from './Cards';
+import React from 'react'
 
+function GridHome() {
+
+    return (
+        <div>
+            <h1>Grid home</h1>
+        </div>
+    )
+}
+
+export default GridHome;
+
+/* A retravailler */
+/* 
 class GridHome extends Component {
     constructor (props) {
         super(props);
@@ -46,4 +58,4 @@ class GridHome extends Component {
             )
         }
     }
-    
+     */
