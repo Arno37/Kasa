@@ -1,18 +1,19 @@
-import { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Card extends Component {
-  render() {
-    const { logement } = this.props;
-    return (
-      <div className='appartement'>
-        <div className='appartement-picture'>
-          <p>{logement.title}</p>
-          <Link key={`logement-${logement.id}`} to={`/logement/${logement.id}`}>
-            <img src={logement.cover} alt={logement.title} />
-          </Link>
-        </div>
-      </div>
-    );
-  }
-}
+const Card = ({ location }) => {
+  let cardClass;
+  !location.cover ? (cardClass = 'card') : (cardClass = 'card no-background');
+  return (
+    <Link
+      to={`/location/${location.id}`}
+      key={location.id}
+      className={cardClass}
+    >
+      {location.cover ? <img src={location.cover} alt='' /> : null}
+      <div className='background'></div>
+      {<h2 key={location.id}>{location.title}</h2>}
+    </Link>
+  );
+};
+export default Card;
