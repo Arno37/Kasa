@@ -1,0 +1,32 @@
+.header {
+  margin: 20px 3% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  &__nav {
+    display: flex;
+    gap: 50px;
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+    & a {
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 24px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  img {
+    @media (max-width: 768px) {
+      width: 9rem;
+    }
+  }
+}
+
+a.active {
+  text-decoration: underline;
+}
