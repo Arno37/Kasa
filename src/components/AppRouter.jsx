@@ -7,6 +7,7 @@ import Apartments from '../pages/Apartments';
 import Error404 from '../pages/Error404';
 
 
+
 function AppRouter() {
   return (
     <Router>

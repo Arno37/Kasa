@@ -14,7 +14,7 @@
         border-radius: 25px;
         filter: brightness(75%);
     }
-    &__txt {
+    &-text {
         position: absolute;
         height: 230px;
         @include flex-center ;
