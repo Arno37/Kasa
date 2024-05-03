@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import HeaderLogo from '../Header/LOGO.png';
 
+
 function Header() {
   return (
     <header className='header'>

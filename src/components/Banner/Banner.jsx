@@ -1,14 +1,14 @@
 import React from "react";
 
-function Banner ({image, texte}) {
+function Banner ({picture, text}) {
     return (
         <section className="banner">
             <div className="banner-text">
-                <img src={image} alt="bannière" />
+                <img src={picture} alt="bannière" />
             </div>
             <div className="banner-text">
                 <h1>
-                    {texte}
+                    {text}
                 </h1>
             </div>
         </section>
