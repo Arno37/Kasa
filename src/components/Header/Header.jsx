@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import HeaderLogo from '../Header/LOGO.png';
+import '../../Style/Header.css';
 
 
 function Header() {
@@ -18,7 +19,7 @@ function Header() {
           to='/about'
           className={({ isActive }) => (isActive ? 'active' : '')}
         >
-          A propos
+          A Propos
         </NavLink>
       </nav>
     </header>
