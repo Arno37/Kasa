@@ -5,6 +5,7 @@ import Home from '../pages/Home/Home';
 import About from '../pages/About';
 import Apartments from '../pages/Apartments';
 import Error404 from '../pages/Error404';
+import Footer from './Footer';
 
 
 
@@ -18,6 +19,7 @@ function AppRouter() {
         <Route path='/apartments' element={<Apartments />} />
         <Route path='/error404' element={<Error404 />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
