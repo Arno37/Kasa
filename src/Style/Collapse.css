@@ -1,79 +1,18 @@
-.collapse {
+.collapse{
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 30px;
     align-items: center;
-    &-visible {
-        background-color: $primary-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 70%;
-        padding: 10px;
-        border-radius: 5px;
-        height: 25px;
-    }
-    &-title {
-        color: $tertiary-color;
-        font-weight: 500;
-        font-size: 24px;
-        @media (max-width : 768px) {
-            font-size: 18px;
-        }
-    }
-    &-invisible {
-        display: flex;
-        justify-content: center;
-        background-color: $secondary-color;
-        width: 70%;
-        padding: 5px 10px ;
-    }
-    &-description {
-        color: $primary-color;
-    }
-    &-picture {
-        cursor: pointer;
-    }
-    /*&__content {
-        display: flex;
-        gap: 80px;
-        margin: 20px 10px;
-        @media (max-width :768px ) {
-            flex-direction: column;
-            gap: 0;
-            margin: 10px;
-        }
-    }
-    &__gauche {
-        width: 100%;
-    }
-    &__droite {
-        width: 100%;*/
-    }
-    &-apartmentvisible {
-        width: 100%;
-        background-color: $primary-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-radius: 5px;
-        height: 25px;
-    }
-    &-apartmentinvisible {
-        display: flex;
-        background-color: $secondary-color;
-        width: 100%;
-        padding: 5px 10px ;
-    }
-    &-list {
-        list-style-type: none;
-        color:  $primary-color;
-    }
-    ul {
-        padding: 0;
-    }
- 
+}
 
-    
+.collapse-visible {
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 25px;
+  }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Header from '../components/Header/Header'
 import Home from '../pages/Home/Home';
 import About from '../pages/About';
@@ -11,7 +11,7 @@ import Footer from './Footer';
 
 function AppRouter() {
   return (
-    <Router>
+    <div>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -20,7 +20,7 @@ function AppRouter() {
         <Route path='/error404' element={<Error404 />} />
       </Routes>
       <Footer />
-    </Router>
+    </div>
   );
 }
 

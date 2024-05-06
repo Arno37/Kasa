@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import list from '../../apartments-list.json';
-import '../../Style/Cards.css'
+
 
 
 

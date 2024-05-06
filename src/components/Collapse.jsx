@@ -3,6 +3,8 @@ import vectorDown from '../pictures/Vector-down.png';
 import vectorUp from '../pictures/Vector-up.png';
 import { useLocation } from 'react-router-dom'
 
+
+
 function Collapse ({ title, description }) {
     const [open, OpenCollapse] = useState(false);
     const location = useLocation();

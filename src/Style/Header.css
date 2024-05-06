@@ -18,6 +18,7 @@
     text-decoration: none;
     color: black;
     font-size: 24px;
+    
   }
   @media (max-width: 768px) {
     .header-nav a {
@@ -31,5 +32,5 @@
     }
   }
   a.active {
-    text-decoration: underline;
-  }
+  text-decoration: underline;
+}
