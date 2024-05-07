@@ -209,4 +209,26 @@ a.active {
     font-size: 96px;
   }
 }
+.text {
+  font-size: 36px;
+  color: #ff6060;
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .link-error {
+    font-size: 14px;
+  }
+}
 
+.collapse{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.collapse-visible {
+  background-color: #ff6060;
+}
