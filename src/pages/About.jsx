@@ -6,7 +6,7 @@ import Collapse from '../components/Collapse';
 function About() {
   return (
     <main>
-      <img src={bannerAbout} />
+      <img className="bannerAbout" src={bannerAbout} alt={bannerAbout} />
 
       {Apartments.map((collapse, criteria) => (
         <Collapse
