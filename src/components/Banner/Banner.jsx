@@ -1,19 +1,15 @@
 import React from "react";
 import '../../Style/Banner.css'
 
-function Banner ({picture, text}) {
+function Banner (props) {
     return (
-        <section className="banner">
-            <div className="banner-text">
-                <img src={picture} alt="bannière" />
+            <div className="banner">
+                <img src={props.picture} className ="backgroundBanner" alt="banner" />
+            {props.title ? <p className="title">{props.name}</p> : null}
             </div>
-            <div className="banner-text">
-                <h1>
-                    {text}
-                </h1>
-            </div>
-        </section>
-    )
+            )
 }
+    
+
 
 export default Banner
