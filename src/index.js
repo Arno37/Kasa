@@ -1,20 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
-import Router from './components/AppRouter';
-import './Style/Index.css';
-import './Style/Main.css';
-import reportWebVitals from './reportWebVitals';
 
 
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/Kasa/" element={<Home />} />
+      </Routes>
+    </Router>
+  );
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-reportWebVitals()
+root.render(<App />);
