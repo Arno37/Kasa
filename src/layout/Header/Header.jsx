@@ -8,7 +8,9 @@ function Header() {
             <NavLink to={`/`}>
                 <img src={kasaLogo} alt="kasalogo" />
             </NavLink>
+
             <nav className="navbar__links">
+                
                 <NavLink to={`/`} className={({ isActive, isPending }) => 
                     isPending ? "pending" : isActive ? "active" : ""
                 }>

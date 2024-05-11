@@ -20,6 +20,7 @@
         border-radius: 0.62rem;
         margin-bottom: 1.25rem;
     }
+    
 
     &__img {
         border-radius: 1.56rem;
@@ -39,7 +40,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3rem;
+        font-size: 5rem;
+        
         @media screen and (max-width: 1024px) {
             font-size: 2.35rem;
         }
@@ -64,7 +66,7 @@
         width: 100%;
         border-radius: 1.5rem;
         opacity: 0.5;
-        mix-blend-mode: darken;
+        mix-blend-mode:darken;
         @media screen and (max-width: 768px) {
             border-radius: 0.62rem;
         }

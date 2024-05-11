@@ -30,13 +30,25 @@ header{
         }
         a {
             text-decoration: none;
+            color: $Theme-color; 
             font-size:  1.5rem;
             font-style: normal;
             font-weight: 600;
             margin-left: 3.12rem;
             cursor: pointer;
+            @media screen and (max-width: 768px){
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                margin-left: 1.25rem;
+            }
+            }
+            &:hover {
+                text-decoration-line:underline;
+                color: $Theme-color; 
+            }
+            
         }
             
         }
-    }
+    
     
