@@ -1,74 +1,114 @@
-@import '../../utils/variables.scss';
+@import './settings.scss';
 
-.banner {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.gallery {
+  aspect-ratio: 1240 / 415;
+  overflow: hidden;
+  @include centered-flex-container;
+  position: relative;
+  border-radius: 25px;
+
+  @media screen and (max-width: 480px) {
+    aspect-ratio: 335 / 255;
+    border-radius: 10px;
+  }
+
+  &.banner {
+    aspect-ratio: 1240 / 223;
+
+
+    @media screen and (max-width: 480px) {
+      aspect-ratio: 335 / 111;
+
+    }
+
+    &::before {
+      @include before-contrast;
+    }
+
+    .gallery__container {
+      position: static;
+    }
+  }
+
+  &__title {
+    color: $tertiary-constrast-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc($clamp-5-10rem / 3.33);
+    position: absolute;
+    z-index: 30;
+    text-align: center;
+
+
+    @media screen and (max-width: 480px) {
+      text-align: left;
+      max-width: 14ch;
+      transform: translateX(-25px);
+    }
+  }
+
+  &__container {
     position: relative;
-    border-radius: 1.56rem;
-    background: $Background-color;
-    height: 13.9rem;
-    max-width: 1240px;
-    margin-bottom: 1.87rem;
-    @media screen and (max-width: 1024px) {
-        height: 12.5rem;
-    }
-    @media screen and (max-width: 768px) {
-        height: 6.93rem;
-        border-radius: 0.62rem;
-        margin-bottom: 1.25rem;
-    }
-    
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    @include centered-flex-container;
+    overflow: hidden;
+  }
 
-    &__img {
-        border-radius: 1.56rem;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        @media screen and (max-width: 768px) {
-            border-radius: 0.62rem;
-        }
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
 
-    h1 {
-        color: $Text-color;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 5rem;
-        
-        @media screen and (max-width: 1024px) {
-            font-size: 2.35rem;
-        }
-        @media screen and (max-width: 768px) {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: 500;
-        }
-        @media screen and (min-width: 375px) {
-            max-width: 75%;
-            max-height: 50%;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
+    &.active {
+      opacity: 1;
     }
+  }
 
-    &__background {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        border-radius: 1.5rem;
-        opacity: 0.5;
-        mix-blend-mode:darken;
-        @media screen and (max-width: 768px) {
-            border-radius: 0.62rem;
-        }
+  &__next,
+  &__prev {
+    border: 0;
+    position: absolute;
+    height: 100%;
+    width: 3.75%;
+    min-width: 2rem;
+    background: url(../assets//pictures/Vector-right.png) center center / 100% 100%;
+    top: 0;
+    right: 1.88%;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+    color: transparent;
+    z-index: 3;
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+    right: auto;
+    left: 1.88%;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 6%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: block;
+    color: $tertiary-constrast-color;
+    font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+    font-family: Montserrat;
+    font-weight: 500;
+    z-index: 3;
+
+
+    @media screen and (max-width: 480px) {
+      display: none;
     }
+  }
 }
