@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-/*========== ☀️ LIGHT MOD ☀️ ==========*/
+
     @media (prefers-color-scheme: light) {
         .navbar__links a {
             color: $Text-color-navbar;
@@ -31,7 +31,7 @@
         }
     }
 
-/*========== 🌙 DARK MOD 🌙 ==========*/
+
     @media (prefers-color-scheme: dark) {
         body {
             background-color: #373a4a;

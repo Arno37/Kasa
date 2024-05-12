@@ -1,6 +1,6 @@
 /*LAYOUT*/
 @use "./layout/BannerHome/bannerhome.scss";
-@use "./layout/Apartments/apartments.scss";
+
 @use "./layout/BannerAbout/bannerabout.scss";
 @use "./layout/Footer/footer.scss";
 @use "./layout/Header/header.scss";
@@ -9,17 +9,17 @@
 /*COMPONENTS*/
 @use "./components/Carousel/carousel.scss";
 @use "./components/Collapse/collapse.scss";
-@use "./components/ApartmentsCards/apartmentscards.scss";
-@use "./components/ApartmentsGallery/apartmentsgallery.scss";
+@use "./components/ApartmentCard/apartmentcard.scss";
+@use "./components/ApartmentGallery/apartmentgallery.scss";
 @use "./components/Rating/rating.scss";
-@use "./components/Tag/tag.scss";
+@use "./components/Tags/tag.scss";
 
 /*PAGES*/
 
 @use "./pages/AboutPage/aboutPage.scss";
 @use "./pages/ErrorPage/errorPage.scss";
 @use "./pages/HomePage/homepage.scss";
-@use "./pages/ApartmentsPage/ApartmentsPage.scss";
+@use "./pages/ApartmentPage/apartmentPage.scss";
 
 /*UTILS*/
 
