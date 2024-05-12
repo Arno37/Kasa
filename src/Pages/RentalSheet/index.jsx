@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Carousel from '../../components/Carousel/Carousel.jsx';
-import Tag from "../../components/Tags/tag.jsx";
-import Rating from '../../components/Rating/rating.jsx';
-import Collapse from '../../components/Collapse/collapse.jsx';
+import Carousel from '../../components/Footer.js';
+import Tag from "../../components/RatingScale.js";
+import Rating from '../../components/HousingSummary.js';
+import Collapse from '../../components/HostIdentity.js';
 import { logementGetById } from '../../services/API.js';
 
 function apartmentPage() {

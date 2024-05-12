@@ -1,0 +1,15 @@
+@import './settings.scss';
+
+.footer{
+    background-color: $footer-color;
+    @include centered-flex-container-column;
+    gap: 30px;
+    padding: 60px;
+
+    &__text {
+        color: $tertiary-constrast-color;
+        font-size: calc($clamp-5-10rem / 6.66);
+        font-weight: 500;
+    }
+    
+}
