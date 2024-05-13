@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import Accueil from "./Pages/Accueil";
+import RentalSheet from "./Pages/RentalSheet/index";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
@@ -14,6 +15,7 @@ root.render(
     <Header />
       <Routes>
       <Route path="/" element={<Accueil />} />
+      <Route path="/RentalSheet/:id" element={<RentalSheet />} />
         
       </Routes>
       <Footer />

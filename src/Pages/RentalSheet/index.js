@@ -6,7 +6,7 @@ import RatingScale from '../../components/RatingScale';
 import HostIdentity from '../../components/HostIdentity';
 import TagList from '../../components/TagList';
 import BannerGallery from '../../components/BannerGallery';
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import HousingSummary from '../../components/HousingSummary';
 
 function RentalSheet() {

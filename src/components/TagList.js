@@ -1,3 +1,4 @@
+import React from "react";
 import rentals from "../datas/logements.json";
 import PropTypes from 'prop-types'
 import "../styles/TagList.scss";

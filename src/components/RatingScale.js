@@ -1,7 +1,8 @@
+import React from "react";
 import fullStar from "../assets/pictures/star.png";
 import emptyStar from "../assets/pictures/star-inactive.png";
 import PropTypes from "prop-types";
-import "../styles/RatingScale.scc";
+import "../styles/RatingScale.scss";
 
 function RatingScale({ scaleValue }) {
     const range = [1, 2, 3, 4, 5]

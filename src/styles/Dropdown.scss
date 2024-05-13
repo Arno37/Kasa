@@ -1,8 +1,8 @@
-@import '../../utils/variables.scss';
+@import './settings.scss';
 
 .footer {
-    background-color: $Footer-color;
-    color: $Text-color;
+    background-color: $footer-color;
+    color: $tertiary-constrast-color;
     padding: 3rem;
     margin: 0 auto;
     max-width: 1440px;
