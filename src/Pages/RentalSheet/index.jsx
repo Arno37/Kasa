@@ -1,59 +1,95 @@
+import { useNavigate, useParams } from 'react-router-dom';
+import rentals from '../../datas/logements.json';
+import '../../styles/RentalSheet.scss';
+import Dropdown from '../../components/Dropdown';
+import RatingScale from '../../components/RatingScale';
+import HostIdentity from '../../components/HostIdentity';
+import TagList from '../../components/TagList';
+import BannerGallery from '../../components/BannerGallery';
 import React from 'react';
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import Carousel from '../../components/Footer.js';
-import Tag from "../../components/RatingScale.js";
-import Rating from '../../components/HousingSummary.js';
-import Collapse from '../../components/HostIdentity.js';
-import { logementGetById } from '../../services/API.js';
+import HousingSummary from '../../components/HousingSummary';
 
-function apartmentPage() {
-  const location = useLocation();
-  const [selectedById, setSelectedById] = useState(null);
+function RentalSheet() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [sheet, setSheet] = useState(null);
 
   useEffect(() => {
-    logementGetById(location.state.logementById)
-      .then(setSelectedById)
-      .catch(console.error);
-  }, [location.state.logementById]);
-  if (selectedById == null) return <div>Loading...</div>;
+    // Search for the rental sheet based on the id parameter
+    function searchRental(id) {
+      for (let i = 0; i < rentals.length; i++) {
+        if (rentals[i].id === id) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    const sheet = searchRental(id);
+    // Redirect to error page if the sheet is not found
+    if (sheet === -1) {
+      navigate('/error');
+    } else {
+      setSheet(sheet);
+    }
+  }, [id, navigate]);
+
+  if (sheet === null) {
+    return null;
+  }
 
   return (
-    <div className='logement'>
-      <Carousel slides={selectedById.pictures} />
-      <div className='logement__description__top'>
-        <div className='logement__description__top--info'>
-          <h1> {selectedById.title} </h1>
-          <h2> {selectedById.location} </h2>
-          <div className='logement__description__top--block-tags'>
-            {selectedById.tags.map((tag, index) => (
-              <Tag key={index} text={tag} />
-            ))}
+    <main>
+      <BannerGallery pictures={rentals[sheet].pictures} />
+
+      <section className='rental-sheet'>
+        <div className='rental-sheet__overview'>
+          <div className='rental-sheet__overview__housing'>
+            <HousingSummary sheet={sheet} />
+            <TagList sheet={sheet} />
+          </div>
+
+          <div className='rental-sheet__overview__host'>
+            <HostIdentity sheet={sheet} />
+            <RatingScale scaleValue={rentals[sheet].rating} />
           </div>
         </div>
 
-        <div className='logement__description__top--host-block'>
-          <div className='logement__description__top--host-block--host'>
-            <h3> {selectedById.host.name} </h3>
-            <img src={selectedById.host.picture} alt={selectedById.title} />
-          </div>
-          <div className='rating'>
-            <Rating rating={parseInt(selectedById.rating, 10)} />
-          </div>
-        </div>
-      </div>
+        <div className='rental-sheet__detail'>
+          <Dropdown
+            dropdownLabel={'Description'}
+            content={
+              <p className='dropdown__content'>{rentals[sheet].description}</p>
+            }
+          />
+          <Dropdown
+            dropdownLabel={'Équipements'}
+            content={
+              <div className='dropdown__hidden-box__item'>
+                <ul>
+                  {rentals[sheet].equipments
+                    .slice(0, 7)
+                    .map((equipement, id) => (
+                      <li key={id}>{equipement}</li>
+                    ))}
+                </ul>
 
-      <div className='logement__description--bottom'>
-        <Collapse title='Description'>{selectedById.description}</Collapse>
-        <Collapse title='Equipement'>
-          <ul>
-            {selectedById.equipments.map((equip, index) => (
-              <li key={index}>{equip}</li>
-            ))}
-          </ul>
-        </Collapse>
-      </div>
-    </div>
+                {rentals[sheet].equipments.length > 7 && (
+                  <ul>
+                    {rentals[sheet].equipments
+                      .slice(7)
+                      .map((equipement, id) => (
+                        <li key={id}>{equipement}</li>
+                      ))}
+                  </ul>
+                )}
+              </div>
+            }
+          />
+        </div>
+      </section>
+    </main>
   );
 }
-export default apartmentPage;
+
+export default RentalSheet;

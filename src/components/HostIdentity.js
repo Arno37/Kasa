@@ -1,39 +1,21 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useState } from "react";
-import classNames from "classnames";
-import vectorup from "../../assets/pictures/Vector-up.png"
+import rentals from "../datas/logements.json";
+import PropTypes from 'prop-types';
+import "../styles/HostIdentity";
 
-const Collapse = ({title, children}) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleFilterOpening = () => {
-        setIsOpen(!isOpen);
-    };
-    const collapseClass = classNames("collapse", { "open": isOpen });
-    const arrowClass = classNames("arrow", { "down": isOpen });
-    const paragraphClass = classNames("paragraph", { "animate": isOpen });
-
+function HostIdentity({ sheet }) {
     return (
-        <div className={collapseClass}>
-            <div className="headCollapse" onClick={handleFilterOpening}>
-                <h3>{title}</h3>
-                <img 
-                src={vectorup} 
-                alt="down-arrow"
-                className={arrowClass} />
-            </div>
-            <div className={paragraphClass}>
-                {children}
-            </div>
-        </div>
-    );
-};
+      <div className="identity">
+        <p className="identity__name">{rentals[sheet].host.name}</p>
+        <img
+          src={rentals[sheet].host.picture}
+          alt={rentals[sheet].host.name}
+          className="identity__picture"
+        />
+      </div>
+    )
+  }
+  HostIdentity.propTypes = {
+    sheet: PropTypes.number.isRequired,
+  };
 
-Collapse.propTypes = {
-    title : PropTypes.string.isRequired,
-    description : PropTypes.node,
-};
-
-export default Collapse;
-
-
+  export default HostIdentity

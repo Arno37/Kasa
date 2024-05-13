@@ -1,26 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import starActive from "../../assets/pictures/star.png";
-import starInactive from "../../assets/pictures/star-inactive.png";
+import rentals from "../datas/logements.json"
+import PropTypes from 'prop-types'
+import "../styles/HousingSummaryscss"
 
-const Rating = ({rating})  => {
-    const fullRating = 5;
-    let starInactive = [];
-    for (let index = 0; index < rating; index++) {
-        starActive.push(<img className="starActive" key={`active-${index}`} src={starActive} alt="Star Active" />);
-    }
-    for (let index = 0; index < (fullRating - rating); index++) {
-        starInactive.push(<img className="starInactive" key={`inactive-${index}`} src={starInactive} alt="Star Inactive" />);
-    }
+function HousingSummary({ sheet }) {
     return (
-        <>
-            {starActive}
-            {starInactive}
-        </>
-    );
-};
-Rating.propTypes = {
-    rating: PropTypes.number.isRequired,
-};
-
-export default Rating;
+      <div className="housing-summary">
+        <h2 className="housing-summary__title">{rentals[sheet].title}</h2>
+        <p className="housing-summary__location">{rentals[sheet].location}</p>
+      </div>
+    )
+  }
+  HousingSummary.propTypes = {
+    sheet: PropTypes.number.isRequired,
+  };
+  
+  export default HousingSummary
