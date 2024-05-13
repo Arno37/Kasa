@@ -1,0 +1,16 @@
+@import './settings.scss';
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__item {
+        background-color: $main-color;
+        padding: 5px clamp(25px, 2vw, 30px);
+        color: $tertiary-constrast-color;
+        font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+        border-radius: clamp(5px, 0.694vw, 10px);
+        @include centered-flex-container;
+    }
+}

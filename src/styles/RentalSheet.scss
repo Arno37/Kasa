@@ -1,0 +1,48 @@
+@import './settings.scss';
+
+.rental-sheet {
+    @include flex-column;
+    gap: clamp(15px, 1.736vw, 25px);
+    box-sizing: border-box;
+
+    &__overview {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media screen and (max-width: 480px) {
+            @include flex-column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        &__housing {
+            flex-basis: 80%;
+            justify-content: flex-start;
+            @include flex-column;
+            gap: clamp(10px, 1.389vw, 20px);
+        }
+
+        &__host {
+            @include flex-column;
+            gap: clamp(15px, 1.736vw, 25px);
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__detail {
+        display: flex;
+        gap: clamp(20px, 5.278vw, 76px);
+
+        @media screen and (max-width: 768px) {
+            @include flex-column;
+            gap: 20px;
+        }
+    }
+}

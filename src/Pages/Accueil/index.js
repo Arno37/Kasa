@@ -11,4 +11,4 @@ function Accueil(){
     </main>
 )
 }
-export default Accueil
+export default Accueil;
