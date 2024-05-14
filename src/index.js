@@ -4,10 +4,10 @@ import "./styles/index.scss"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/header";
 import Footer from "./components/Footer";
-import Welcome from "./Pages/Welcome";
-import About from "./Pages/About";
-import Emplacement from "./Pages/Emplacement/index";
-import Error404 from "./Pages/Error404";
+import Welcome from "./pages/Welcome";
+import About from "./pages/About";
+import Emplacement from "./pages/Emplacement/index";
+import Error404 from "./pages/Error404";
 
 
 

@@ -3,11 +3,11 @@ import { useNavigate, useParams } from 'react-router-dom';
 import rentals from '../../datas/logements.json';
 import '../../styles/RentalSheet.scss';
 import  Vector from '../../components/Vector.js';
-import Rating from '../../components/Rating';
-import Identity from '../../components/Identity';
+import Rating from '../../components/Rating.js';
+import Identity from '../../components/Identity.js';
 import Tag from '../../components/Tag.js';
 import Gallery from '../../components/Banner.js';
-import Summary from '../../components/Summary';
+import Summary from '../../components/Summary.js';
 
 function RentalSheet() {
   const { id } = useParams();

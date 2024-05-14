@@ -3,7 +3,7 @@ import image from "../../assets/pictures/about-banner.png";
 import Gallery from "../../components/Banner.js";
 import "../../styles/About.scss";
 import Dropdown from "../../components/Vector.js";
-import { AProposData } from "../../datas/AProposData"
+import { AProposData } from "../../datas/AProposData.js"
 
 function Apropos() {
     return (
