@@ -3,7 +3,7 @@ import rentals from "../datas/logements.json";
 import PropTypes from 'prop-types';
 import "../styles/Renter.scss";
 
-function HostIdentity({ sheet }) {
+function Identity({ sheet }) {
     return (
       <div className="identity">
         <p className="identity__name">{rentals[sheet].host.name}</p>
@@ -15,8 +15,8 @@ function HostIdentity({ sheet }) {
       </div>
     )
   }
-  HostIdentity.propTypes = {
+  Identity.propTypes = {
     sheet: PropTypes.number.isRequired,
   };
 
-  export default HostIdentity
+  export default Identity;

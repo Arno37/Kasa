@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import rentals from '../../datas/logements.json';
 import '../../styles/RentalSheet.scss';
-import  Vector from '../../components/Vector.js';
+import Vector from '../../components/Vector.js';
 import Rating from '../../components/Rating.js';
 import Identity from '../../components/Identity.js';
 import Tag from '../../components/Tag.js';
 import Gallery from '../../components/Banner.js';
 import Summary from '../../components/Summary.js';
 
-function RentalSheet() {
+function Emplacement() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [sheet, setSheet] = useState(null);
@@ -78,4 +78,4 @@ function RentalSheet() {
   );
 }
 
-export default RentalSheet;
+export default Emplacement;

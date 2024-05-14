@@ -5,7 +5,7 @@ import "../../styles/About.scss";
 import Dropdown from "../../components/Vector.js";
 import { AProposData } from "../../datas/AProposData.js"
 
-function Apropos() {
+function About() {
     return (
       <main>
         <Gallery pictures={[image]} banner={true} />
@@ -35,4 +35,4 @@ function Apropos() {
     )
   }
   
-  export default Apropos
+  export default About

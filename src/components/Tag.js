@@ -3,7 +3,7 @@ import rentals from "../datas/logements.json";
 import PropTypes from 'prop-types'
 import "../styles/Tag.scss";
 
-function TagList({ sheet }) {
+function Tag({ sheet }) {
     return (
       <ul className="tag-list">
         {rentals[sheet].tags.map((tag, id) => (
@@ -14,8 +14,8 @@ function TagList({ sheet }) {
       </ul>
     )
   }
-  TagList.propTypes = {
+  Tag.propTypes = {
     sheet: PropTypes.number.isRequired,
   };
   
-  export default TagList
+  export default Tag;

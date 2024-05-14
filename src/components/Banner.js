@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Gallery.scss";
 
-const BannerGallery = ({ pictures, slogan, banner }) => {
+const Banner = ({ pictures, slogan, banner }) => {
     const [currentItem, setCurrentItem] = useState(0)
   
     // Function to move to the next image
@@ -60,10 +60,10 @@ const BannerGallery = ({ pictures, slogan, banner }) => {
       </div>
     )
   }
-  BannerGallery.propTypes = {
+  Banner.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
     slogan: PropTypes.string,
     banner: PropTypes.bool
   };
   
-  export default BannerGallery
+  export default Banner

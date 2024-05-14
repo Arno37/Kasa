@@ -4,7 +4,7 @@ import "../styles/Dropdown.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function Dropdown({ dropdownLabel, content }) {
+function Vector({ dropdownLabel, content }) {
   const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("")
   const [isOpen, modifyOpen] = useState(false)
   const display = (
@@ -49,9 +49,9 @@ function Dropdown({ dropdownLabel, content }) {
     </div>
   )
 }
-Dropdown.propTypes = {
+Vector.propTypes = {
   dropdownLabel: PropTypes.string.isRequired,
   content: PropTypes.node.isRequired 
 };
 
-export default Dropdown
+export default Vector;

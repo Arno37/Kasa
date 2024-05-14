@@ -3,7 +3,7 @@ import rentals from "../datas/logements.json"
 import PropTypes from 'prop-types'
 import "../styles/HousingSummary.scss"
 
-function HousingSummary({ sheet }) {
+function Summary({ sheet }) {
     return (
       <div className="housing-summary">
         <h2 className="housing-summary__title">{rentals[sheet].title}</h2>
@@ -11,8 +11,8 @@ function HousingSummary({ sheet }) {
       </div>
     )
   }
-  HousingSummary.propTypes = {
+  Summary.propTypes = {
     sheet: PropTypes.number.isRequired,
   };
   
-  export default HousingSummary
+  export default Summary;

@@ -4,7 +4,7 @@ import emptyStar from "../assets/pictures/star-inactive.png";
 import PropTypes from "prop-types";
 import "../styles/Scale.scss";
 
-function RatingScale({ scaleValue }) {
+function Rating({ scaleValue }) {
     const range = [1, 2, 3, 4, 5]
   
     return (
@@ -32,8 +32,8 @@ function RatingScale({ scaleValue }) {
       </div>
     )
   }
-  RatingScale.propTypes = {
+  Rating.propTypes = {
     scaleValue: PropTypes.string.isRequired,
   };
   
-  export default RatingScale
+  export default Rating;

@@ -1,7 +1,7 @@
 @import './settings.scss';
 
 
-.a-propos {
+.about {
   @include centered-flex-container-column;
   gap: clamp(20px, 2.083vw, 30px);
   padding-left: 8.75%;
