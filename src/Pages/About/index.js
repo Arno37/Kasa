@@ -1,14 +1,14 @@
 import React from "react";
 import image from "../../assets/pictures/about-banner.png";
-import BannerGallery from "../../components/BannerGallery";
-import "../../styles/APropos.scss"
-import Dropdown from "../../components/Dropdown";
+import Gallery from "../../components/Banner.js";
+import "../../styles/About.scss";
+import Dropdown from "../../components/Vector.js";
 import { AProposData } from "../../datas/AProposData"
 
 function Apropos() {
     return (
       <main>
-        <BannerGallery pictures={[image]} banner={true} />
+        <Gallery pictures={[image]} banner={true} />
         <section className="a-propos">
           <Dropdown
             dropdownLabel={AProposData[0].label}
@@ -23,7 +23,7 @@ function Apropos() {
           <Dropdown
             dropdownLabel={AProposData[2].label}
             content={<p>{AProposData[2].content}</p>}
-            c
+            
           />
   
           <Dropdown

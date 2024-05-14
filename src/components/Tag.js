@@ -1,7 +1,7 @@
 import React from "react";
 import rentals from "../datas/logements.json";
 import PropTypes from 'prop-types'
-import "../styles/TagList.scss";
+import "../styles/Tag.scss";
 
 function TagList({ sheet }) {
     return (

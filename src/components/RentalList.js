@@ -1,5 +1,5 @@
 import "../styles/RentalList.scss";
-import RentalItem from "./RentalItem";
+import RentalItem from "./Rental";
 import React from "react";
 import rentals from "../datas/logements.json";
 

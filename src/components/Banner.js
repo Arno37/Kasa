@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import "../styles/BannerGallery.scss";
+import "../styles/Gallery.scss";
 
 const BannerGallery = ({ pictures, slogan, banner }) => {
     const [currentItem, setCurrentItem] = useState(0)
@@ -20,6 +20,7 @@ const BannerGallery = ({ pictures, slogan, banner }) => {
       return (
         <div className={`gallery ${banner ? "banner" : ""}`}>
           <div className="gallery__container">
+            
             <img
               src={pictures[0]}
               alt="Slide 1"

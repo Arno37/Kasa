@@ -5,7 +5,7 @@
   gap: clamp(26px, 3.958vw, 57px);
   list-style-type: none;
   align-items: center;
-  padding: 0px;
+  padding: 0%;
   margin: 0;
 
   .navbar__logo {
@@ -35,7 +35,7 @@
   }
 
   &__link {
-    color: $main-color;
+    color: $footer-color;
     text-decoration: none;
     font-size: calc($clamp-5-10rem / 6.66);
 

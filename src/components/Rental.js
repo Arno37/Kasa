@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-import "../styles/RentalItem.scss";
+import "../styles/Item.scss";
 
 function RentalItem({ title, cover, id }) {
     return (

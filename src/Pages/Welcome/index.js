@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../assets/pictures/home-banner.png";
-import BannerGallery from "../../components/BannerGallery";
+import BannerGallery from "../../components/Banner.js";
 import RentalList from "../../components/RentalList";
 
 function Accueil(){
