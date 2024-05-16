@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/pictures/about-banner.png";
+import image from "../../assets/pictures/banner-a-propos-image.png";
 import Gallery from "../../components/Banner.js";
 import "../../styles/About.scss";
 import Dropdown from "../../components/Vector.js";
@@ -9,7 +9,7 @@ function About() {
     return (
       <main>
         <Gallery pictures={[image]} banner={true} />
-        <section className="a-propos">
+        <section className="about">
           <Dropdown
             dropdownLabel={AProposData[0].label}
             content={<p>{AProposData[0].content}</p>}

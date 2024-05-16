@@ -29,10 +29,19 @@ code {
 .rental-list,
 .rental-sheet,
 .gallery,
-.a-propos {
+.about
+ {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-left: $clamp-0-100px;
     margin-right: $clamp-0-100px;
     margin-bottom: calc($clamp-0-100px * 0.4);
+    @media screen and (max-width: 480px) {
+       padding: 0px;
+        gap: 0px;
+      }
+
 }
 
 main {

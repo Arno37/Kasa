@@ -5,9 +5,9 @@ import "../styles/Tag.scss";
 
 function Tag({ sheet }) {
     return (
-      <ul className="tag-list">
+      <ul className="tag">
         {rentals[sheet].tags.map((tag, id) => (
-          <li key={id} className="tag-list__item">
+          <li key={id} className="tag__item">
             {tag}
           </li>
         ))}

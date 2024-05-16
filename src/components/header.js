@@ -16,10 +16,10 @@ function Header() {
             
           </Link>
           <Link className="navbar__link" to="/">
-            Accueil
+            ACCUEIL
           </Link>
           <Link className="navbar__link" to="/a-propos">
-            A Propos
+            A PROPOS
           </Link>
         </nav>
       </header>

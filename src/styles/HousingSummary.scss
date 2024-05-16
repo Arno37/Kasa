@@ -1,19 +1,56 @@
 @import './settings.scss';
 
-.housing-summary {
-    @include flex-column;
-    gap: clamp(5px, 0.694vw, 10px);
+.rental {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding: calc($clamp-0-100px * 0.2);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 
-&__title {
-    color: $main-color;
-    font-size: calc($clamp-5-10rem / 4.44);
-    font-weight: 500;
+    &::before {
+        @include before-contrast;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__title {
+        font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+        font-weight: 500;
+        color: $tertiary-constrast-color;
+        z-index: 2;
+
+        @media screen and (max-width: 480px) {
+            font-size: 1.125rem;
+        }
+    }
 }
 
-&__location {
+.housing-summary{
+   
+    font-weight: 500;
+    padding-bottom: 10px;
     
-    font-size: clamp(0.875rem, 1.25vw, 1.125rem);
-    font-weight: 500;
-}
+   
+    &__title {
+        color: $main-color;
+        padding: 0 0 10px 0; 
+        font-size: 36px;
+    
+        
+    }
 
+    
 }

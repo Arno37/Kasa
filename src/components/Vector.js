@@ -13,10 +13,6 @@ function Vector({ dropdownLabel, content }) {
     </div>
   )
 
-  /**
-   * Function to control rotation of the handle
-   * and to toggle the open/closed state of the dropdown.
-   */
 
   function dropdownRotate() {
     if (classNameSuffixValue === "") {

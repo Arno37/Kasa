@@ -41,4 +41,6 @@ $clamp-07-1rem: clamp(0.75rem, 1.25vw, 1.125rem);
     inset: 0;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.3);
+    @include before-contrast;
 }
+

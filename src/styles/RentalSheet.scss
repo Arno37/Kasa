@@ -2,7 +2,7 @@
 
 .rental-sheet {
     @include flex-column;
-    gap: clamp(15px, 1.736vw, 25px);
+    gap: clamp(15px, 2.736vw, 25px);
     box-sizing: border-box;
 
     &__overview {

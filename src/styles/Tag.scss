@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-weight: 700;
 
     &__item {
         background-color: $main-color;
@@ -12,6 +13,5 @@
         font-size: clamp(0.625rem, 0.972vw, 0.875rem);
         border-radius: clamp(5px, 0.694vw, 10px);
         @include centered-flex-container;
-        font-weight: 700;
     }
 }
