@@ -49,7 +49,7 @@
         -1px  1px 0 #000000,
          1px  1px 0 #000000;
     
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
       text-align: left;
       max-width: 14ch;
       transform: translateX(-51px);
@@ -58,19 +58,18 @@
     }
   }
 
+
   &__container {
     position: relative;
     border-radius: 25px;
     width: 100%;
     height: 100%;
+    @include centered-flex-container;
+    overflow: hidden;
    
   }
 
-    @include centered-flex-container;
-    overflow: hidden;
-    
   
-
   &__image {
     width: 100%;
     height: 100%;
@@ -131,4 +130,4 @@
       display: none;
     }
   }
-}
+  }

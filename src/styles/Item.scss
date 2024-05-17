@@ -9,6 +9,7 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+   
 
     &::before {
         @include before-contrast;

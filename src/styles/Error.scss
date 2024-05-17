@@ -5,20 +5,46 @@
     gap: 100px;
     justify-content: space-around;
     align-items: center;
+    color: $main-color;
 
     &__type {
         font-size: clamp(6rem, 20vw, 18rem);
         color: $main-color;
         font-weight: 700;
+        padding: 60px;
+        text-align: center;
+       
     }
 
     &__link {
         font-size: clamp(0.875rem, 1.25vw, 1.125rem);
-        color: $main-color;
+        color: $footer-color;
         font-weight: 500;
+        padding: 85px;
+        @media screen and (max-width: 480px) {
+            font-size: 13px;
+            
+            
+           }
+    }
 
-        &:hover {
+        &__message {
+            font-weight: 500;
+            font-size: 36px;
+            text-align: center;
+            
+            @media screen and (max-width: 480px) {
+                font-size: 18px;
+                
+                
+               }
+
+        }
+        
+
+        &__link:hover {
             text-decoration: underline;
         }
+
+        
     }
-}

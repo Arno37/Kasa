@@ -5,6 +5,10 @@
     @include centered-flex-container-column;
     gap: 30px;
     padding: 60px;
+    height: 209px;
+    @media screen and (max-width: 480px) {
+        padding: 60px
+    }
 
     &__text {
         color: $tertiary-constrast-color;
