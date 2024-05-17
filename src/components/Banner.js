@@ -5,7 +5,7 @@ import "../styles/Gallery.scss";
 const Banner = ({ pictures, slogan, banner }) => {
     const [currentItem, setCurrentItem] = useState(0)
   
-    // Function to move to the next image
+   // Function to move to the next image
     const next = () => {
       setCurrentItem((currentItem + 1) % pictures.length)
     }
@@ -32,7 +32,7 @@ const Banner = ({ pictures, slogan, banner }) => {
       )
     }
   
-    // If the gallery contains multiple images, display the list of images with navigation buttons
+   // If the gallery contains multiple images, display the list of images with navigation buttons
     return (
       <div className={`gallery ${banner ? "banner" : ""}`}>
         <div className="gallery__container">

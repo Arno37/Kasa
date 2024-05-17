@@ -12,7 +12,7 @@ function Rating({ scaleValue }) {
         {/* Map over the range array to generate stars */}
         {range.map((rangeElem) =>
           scaleValue >= rangeElem ? (
-            // Display a full star if scaleValue is greater than or equal to the current range element
+             // Display a full star if scaleValue is greater than or equal to the current range element
             <img
               src={fullStar}
               alt={scaleValue}
