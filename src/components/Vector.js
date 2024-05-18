@@ -1,20 +1,20 @@
 import React from "react";
-import dropdownHandle from "../assets/pictures/Vector-down.png"
-import "../styles/Dropdown.scss";
+import collapseHandle from "../assets/pictures/Vector-down.png"
+import "../styles/Collapse.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function Vector({ dropdownLabel, content }) {
+function Vector({ collapseLabel, content }) {
   const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("")
   const [isOpen, modifyOpen] = useState(false)
   const display = (
-    <div className={`dropdown__hidden-box${classNameSuffixValue}`}>
+    <div className={`collapse__hidden-box${classNameSuffixValue}`}>
       {content}
     </div>
   )
 
 
-  function dropdownRotate() {
+  function collapseRotate() {
     if (classNameSuffixValue === "") {
       modifyOpen(true)
       setTimeout(() => {
@@ -29,15 +29,15 @@ function Vector({ dropdownLabel, content }) {
   }
 
   return (
-    <div className="dropdown">
-      <div className={`dropdown__background${classNameSuffixValue}`}>
-        <div className="dropdown__title">
-          <p className="dropdown__title__label">{dropdownLabel}</p>
+    <div className="collapse">
+      <div className={`collapse__background${classNameSuffixValue}`}>
+        <div className="collapse__title">
+          <p className="collapse__title__label">{collapseLabel}</p>
           <img
-            src={dropdownHandle}
-            onClick={dropdownRotate}
-            alt="dropdown-handle"
-            className={`dropdown__title__handle${classNameSuffixValue}`}
+            src={collapseHandle}
+            onClick={collapseRotate}
+            alt="collapse-handle"
+            className={`collapse__title__handle${classNameSuffixValue}`}
           />
         </div>
         {isOpen && display}
@@ -46,7 +46,7 @@ function Vector({ dropdownLabel, content }) {
   )
 }
 Vector.propTypes = {
-  dropdownLabel: PropTypes.string.isRequired,
+  collapseLabel: PropTypes.string.isRequired,
   content: PropTypes.node.isRequired 
 };
 
