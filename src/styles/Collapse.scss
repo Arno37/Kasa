@@ -1,11 +1,7 @@
 @import './settings.scss';
 
-.dropdown {
+.collapse {
     width: 100%;
-    
-	
-   
-    
 
     &__background--open {
         background-color: $secondary-background-color;
