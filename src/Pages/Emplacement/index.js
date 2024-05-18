@@ -57,13 +57,13 @@ function Emplacement() {
 
         <div className="rental-sheet__detail">
           <Vector
-            dropdownLabel="Description"
-            content={<p className="dropdown__content">{rentals[sheet].description}</p>}
+            collapseLabel="Description"
+            content={<p className="collapse__content">{rentals[sheet].description}</p>}
           />
           <Vector
-            dropdownLabel="Équipements"
+            collapseLabel="Équipements"
             content={
-              <div className="dropdown__hidden-box__item">
+              <div className="collapse__hidden-box__item">
                 <ul>
                   {rentals[sheet].equipments.map((equipment, index) => (
                     <li key={index}>{equipment}</li>
