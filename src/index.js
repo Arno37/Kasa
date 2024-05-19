@@ -6,7 +6,7 @@ import Header from "./components/header";
 import Footer from "./components/Footer";
 import Welcome from "./Pages/Welcome";
 import About from "./Pages/About/index";
-import Emplacement from "./Pages/Emplacement/index";
+import Area from "./Pages/Area/index";
 import Error404 from "./Pages/Error404";
 
 
@@ -18,7 +18,7 @@ root.render(
       <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/a-propos" element={<About />} />
-      <Route path="/RentalSheet/:id" element={<Emplacement />} />
+      <Route path="/RentalSheet/:id" element={<Area />} />
       <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

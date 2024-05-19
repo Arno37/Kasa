@@ -7,9 +7,9 @@ import Rating from '../../components/Rating.js';
 import Identity from '../../components/Identity.js';
 import Tag from '../../components/Tag.js';
 import Gallery from '../../components/Banner.js';
-import Summary from '../../components/Summary.js';
+import Description from '../../components/Description.js';
 
-function Emplacement() {
+function Area() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [sheet, setSheet] = useState(null);
@@ -45,7 +45,7 @@ function Emplacement() {
       <section className="rental-sheet">
         <div className="rental-sheet__overview">
           <div className="rental-sheet__overview__housing">
-            <Summary sheet={sheet} />
+            <Description sheet={sheet} />
             <Tag sheet={sheet} />
           </div>
 
@@ -78,4 +78,4 @@ function Emplacement() {
   );
 }
 
-export default Emplacement;
+export default Area;

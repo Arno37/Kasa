@@ -5,17 +5,17 @@ import "../styles/Gallery.scss";
 const Banner = ({ pictures, slogan, banner }) => {
     const [currentItem, setCurrentItem] = useState(0)
   
-   // Function to move to the next image
+  
     const next = () => {
       setCurrentItem((currentItem + 1) % pictures.length)
     }
   
-    // Function to move to the previous image
+    
     const prev = () => {
       setCurrentItem((currentItem - 1 + pictures.length) % pictures.length)
     }
   
-    // If the gallery contains only one image, display only that image
+   
     if (pictures.length === 1) {
       return (
         <div className={`gallery ${banner ? "banner" : ""}`}>
@@ -32,7 +32,7 @@ const Banner = ({ pictures, slogan, banner }) => {
       )
     }
   
-   // If the gallery contains multiple images, display the list of images with navigation buttons
+   
     return (
       <div className={`gallery ${banner ? "banner" : ""}`}>
         <div className="gallery__container">
