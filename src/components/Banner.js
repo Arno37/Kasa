@@ -1,21 +1,29 @@
 import React, { useState } from "react";
+//Importe React et le hook useState depuis la bibliothèque React
 import PropTypes from "prop-types";
+//Importe la bibliothèque PropTypes pour vérifier les types des propriétés
 import "../styles/Gallery.scss";
+//Importe les styles CSS pour le composant depuis le fichier Gallery.scss
 
+
+// Déclaration du composant fonctionnel Banner
 const Banner = ({ pictures, slogan, banner }) => {
+  
     const [currentItem, setCurrentItem] = useState(0)
   
-  
+   // Fonction pour passer à l'image suivante
     const next = () => {
       setCurrentItem((currentItem + 1) % pictures.length)
+      
     }
   
-    
+    // Fonction pour revenir à l'image précédente
     const prev = () => {
       setCurrentItem((currentItem - 1 + pictures.length) % pictures.length)
+      
     }
   
-   
+   // Si la galerie contient une seule image, affiche seulement cette image
     if (pictures.length === 1) {
       return (
         <div className={`gallery ${banner ? "banner" : ""}`}>
@@ -32,8 +40,9 @@ const Banner = ({ pictures, slogan, banner }) => {
       )
     }
   
-   
+  
     return (
+      // Si la galerie contient plusieurs images, cela affiche la liste des images avec des boutons de navigation
       <div className={`gallery ${banner ? "banner" : ""}`}>
         <div className="gallery__container">
           {pictures.map((picture, index) => (
@@ -60,10 +69,13 @@ const Banner = ({ pictures, slogan, banner }) => {
       </div>
     )
   }
+  // Définit les types des propriétés attendues pour le composant Banner
   Banner.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
     slogan: PropTypes.string,
     banner: PropTypes.bool
   };
   
-  export default Banner
+// Exporte le composant Banner pour pouvoir l'utiliser dans d'autres parties de l'application
+export default Banner;
+ 

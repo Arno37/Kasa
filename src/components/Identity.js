@@ -6,6 +6,7 @@ import "../styles/Renter.scss";
 function Identity({ sheet }) {
     return (
       <div className="identity">
+        
         <p className="identity__name">{rentals[sheet].host.name}</p>
         <img
           src={rentals[sheet].host.picture}
@@ -15,8 +16,10 @@ function Identity({ sheet }) {
       </div>
     )
   }
+  //Définit les types des propriétés attendues pour le composant Identity, spécifiant que sheet est un nombre requis.
   Identity.propTypes = {
     sheet: PropTypes.number.isRequired,
   };
-
+  
+  
   export default Identity;
