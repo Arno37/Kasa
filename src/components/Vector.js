@@ -21,21 +21,19 @@ function Vector({ collapseLabel, content }) {
   )
 
 //Déclare la fonction collapseRotate qui gère l'ouverture et la fermeture du collapse.
-function collapseRotate() {
-
-  //Vérifie si la valeur de classNameSuffixValue est une chaîne vide
-  if (classNameSuffixValue === "") {
-
-    //Si classNameSuffixValue est une chaîne vide, cette ligne met à jour l'état isOpen en le définissant sur true, ce qui signifie que le collapse est ouvert.
-    modifyOpen(true);
-
-    //Si classNameSuffixValue n'est pas une chaîne vide, cette ligne supprime la classe --open de classNameSuffixValue. Cela signifie que le collapse est fermé.
-    modifyClassNameSuffixValue("--open");
-  } else {
-    modifyClassNameSuffixValue("");
-    modifyOpen(false);
+  function collapseRotate() {
+    if (classNameSuffixValue === "") {
+      modifyOpen(true)
+      setTimeout(() => {
+        modifyClassNameSuffixValue("--open")
+      }, 500)
+    } else {
+      modifyClassNameSuffixValue("")
+      setTimeout(() => {
+        modifyOpen(false)
+      }, 500)
+    }
   }
-}
 
   return (
     <div className="collapse">
@@ -56,7 +54,6 @@ function collapseRotate() {
 }
 Vector.propTypes = {
   collapseLabel: PropTypes.string.isRequired,
-  //Cette ligne définit le type de la propriété content. Elle utilise PropTypes.node pour indiquer qu'elle peut accepter n'importe quel type de nœud React, comme des éléments JSX, des chaînes de caractères, des composants, etc. Le isRequired signifie que cette propriété est également obligatoire.
   content: PropTypes.node.isRequired 
 };
 
