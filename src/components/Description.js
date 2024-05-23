@@ -1,5 +1,6 @@
 import React from "react"
 import rentals from "../datas/logements.json"
+//Importe la bibliothèque PropTypes pour vérifier les types des propriétés
 import PropTypes from 'prop-types'
 import "../styles/HousingDescription.scss"
 

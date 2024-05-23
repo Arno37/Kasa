@@ -94,15 +94,19 @@
             }
 
             * {
-                transition: transform 400ms 200ms;
+                transition: transform 0ms 5ms;
                 transform: translateY(0px);
-                z-index: -1;
+                z-index: 0;
                 align-self: center;
                 
             }
 
             ul {
                 align-self: flex-start;
+                transition: transform 0ms 5ms;
+                transform: translateY(0px);
+                z-index: 0;
+                align-self: center;
                 
             }
         }

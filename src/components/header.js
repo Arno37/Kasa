@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Header.scss";
-
 //Importe le composant Link depuis la bibliothèque react-router-dom pour la navigation interne
 import { Link } from "react-router-dom";
 
@@ -15,10 +14,10 @@ function Header() {
             </h1>
           </Link>
           <Link className="navbar__link" to="/">
-            ACCUEIL
+            Accueil
           </Link>
           <Link className="navbar__link" to="/a-propos">
-            A PROPOS
+            A Propos
           </Link>
         </nav>
       </header>

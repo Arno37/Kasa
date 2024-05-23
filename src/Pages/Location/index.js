@@ -1,17 +1,22 @@
+
 import React, { useEffect, useState } from 'react';
+//useNavigate et useParams sont importés depuis react-router-dom pour la navigation et pour récupérer les paramètres de l'URL.
 import { useNavigate, useParams } from 'react-router-dom';
 import rentals from '../../datas/logements.json';
 import '../../styles/RentalSheet.scss';
-import Vector from '../../components/Vector.js';
+import Collapse from '../../components/Collapse.js';
 import Rating from '../../components/Rating.js';
 import Identity from '../../components/Identity.js';
 import Tag from '../../components/Tag.js';
 import Gallery from '../../components/Banner.js';
 import Description from '../../components/Description.js';
 
-function Area() {
+function Location() {
+  //useParams est utilisé pour récupérer l'ID du logement à partir de l'URL
   const { id } = useParams();
+  //useNavigate est utilisé pour naviguer et/ou rediriger l'utilisateur vers une autre page
   const navigate = useNavigate();
+  //useState est utilisé pour gérer l'état local du composant
   const [sheet, setSheet] = useState(null);
 
   useEffect(() => {
@@ -56,11 +61,11 @@ function Area() {
         </div>
 
         <div className="rental-sheet__detail">
-          <Vector
+          <Collapse
             collapseLabel="Description"
             content={<p className="collapse__content">{rentals[sheet].description}</p>}
           />
-          <Vector
+          <Collapse
             collapseLabel="Équipements"
             content={
               <div className="collapse__hidden-box__item">
@@ -78,4 +83,4 @@ function Area() {
   );
 }
 
-export default Area;
+export default Location;

@@ -1,11 +1,11 @@
 import React from "react";
-import collapseHandle from "../assets/pictures/Vector-down.png"
+import collapseHandle from "../assets/pictures/collapse-down.png"
 import "../styles/Collapse.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-//Déclare le composant fonctionnel Vector qui accepte les propriétés collapseLabel et content.
-function Vector({ collapseLabel, content }) {
+
+function Collapse({ collapseLabel, content }) {
 
   //Utilise le hook useState pour gérer l'état classNameSuffixValue, initialisé à une chaîne vide
   const [classNameSuffixValue, modifyClassNameSuffixValue] = useState("")
@@ -52,9 +52,11 @@ function Vector({ collapseLabel, content }) {
     </div>
   )
 }
-Vector.propTypes = {
+
+
+Collapse.propTypes = {
   collapseLabel: PropTypes.string.isRequired,
   content: PropTypes.node.isRequired 
 };
 
-export default Vector;
+export default Collapse;

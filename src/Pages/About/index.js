@@ -2,7 +2,7 @@ import React from "react";
 import image from "../../assets/pictures/banner-a-propos-image.png";
 import Gallery from "../../components/Banner.js";
 import "../../styles/About.scss";
-import Collapse from "../../components/Vector.js";
+import Collapse from "../../components/Collapse.js";
 import { AProposData } from "../../datas/AProposData.js"
 
 function About() {

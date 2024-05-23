@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 //Importe React et le hook useState depuis la bibliothèque React
-import PropTypes from "prop-types";
+import React, { useState } from "react";
 //Importe la bibliothèque PropTypes pour vérifier les types des propriétés
-import "../styles/Gallery.scss";
+import PropTypes from "prop-types";
 //Importe les styles CSS pour le composant depuis le fichier Gallery.scss
+import "../styles/Gallery.scss";
+
 
 
 // Déclaration du composant fonctionnel Banner
