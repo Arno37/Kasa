@@ -1,3 +1,6 @@
+![image](https://github.com/Arno37/Kasa/assets/140819974/dc33f62c-fa36-47aa-a0f0-796934e023d6)
+
+
 # KASA
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
