@@ -1,6 +1,7 @@
 # Créez une application web de location immobilière avec React
 
 ![image](https://github.com/Arno37/Kasa/assets/140819974/dc33f62c-fa36-47aa-a0f0-796934e023d6)
+
 # Description
 
 Kasa is a leading platform for peer-to-peer apartment rentals in France, with over 500 new listings posted daily.
