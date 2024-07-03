@@ -1,17 +1,7 @@
 # Créez une application web de location immobilière avec React
 ![image](https://raw.githubusercontent.com/Arno37/Kasa/main/src/pic/kasa-renamed.png)
-
-
-
-
 ![image](https://raw.githubusercontent.com/Arno37/Kasa/main/src/pic/kasa_1.png)
-
-
-
-
 ![image](https://raw.githubusercontent.com/Arno37/Kasa/main/src/pic/kasa_2.png)
-
-
 
 ## Description
 
