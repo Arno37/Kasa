@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/a-propos/static/css/main.ac8eb0dc.css",
-    "main.js": "/a-propos/static/js/main.177624b1.js",
-    "static/media/banner-a-propos-image.png": "/a-propos/static/media/banner-a-propos-image.de8219952d61af70db68.png",
-    "static/media/home-banner.png": "/a-propos/static/media/home-banner.19221376a0aa2549c135.png",
-    "index.html": "/a-propos/index.html",
-    "main.ac8eb0dc.css.map": "/a-propos/static/css/main.ac8eb0dc.css.map",
-    "main.177624b1.js.map": "/a-propos/static/js/main.177624b1.js.map"
+    "main.css": "/Kasa/a-propos/static/css/main.ac8eb0dc.css",
+    "main.js": "/Kasa/a-propos/static/js/main.57dbe71e.js",
+    "static/media/banner-a-propos-image.png": "/Kasa/a-propos/static/media/banner-a-propos-image.de8219952d61af70db68.png",
+    "static/media/home-banner.png": "/Kasa/a-propos/static/media/home-banner.19221376a0aa2549c135.png",
+    "index.html": "/Kasa/a-propos/index.html",
+    "main.ac8eb0dc.css.map": "/Kasa/a-propos/static/css/main.ac8eb0dc.css.map",
+    "main.57dbe71e.js.map": "/Kasa/a-propos/static/js/main.57dbe71e.js.map"
   },
   "entrypoints": [
     "static/css/main.ac8eb0dc.css",
-    "static/js/main.177624b1.js"
+    "static/js/main.57dbe71e.js"
   ]
 }
