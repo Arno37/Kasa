@@ -1,8 +1,6 @@
 # Créez une application web de location immobilière avec React
 
-## Site Access
-
-To access my site, click !(https://github.com/Arno37/Kasa/blob/main/src/pic/kasa-renamed.png)
+![image](https://raw.githubusercontent.com/Arno37/Kasa/blob/main/src/pic/kasa-renamed.png)
 
 
 
