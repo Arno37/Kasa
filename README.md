@@ -5,6 +5,8 @@
 
 ![image](https://raw.githubusercontent.com/Arno37/Kasa/main/src/pic/kasa_2.png)<br><br><br><br><br>
 
+[Accédez à l'application déployée ici](https://arno37.github.io/Kasa/)
+
 
 ## Description
 
