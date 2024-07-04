@@ -3,7 +3,7 @@
 
 ## Site Access
 
-Click [**here**](https://arno37.github.io/Kasa/) and click on "Accueil" or "A Propos" and you can navigate
+Click [**here**](https://arno37.github.io/Kasa/) and click on "Accueil" or "A Propos" and navigate on the website
 
 
 ## Description
